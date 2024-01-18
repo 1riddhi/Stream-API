@@ -22,5 +22,9 @@ public class App {
 
         System.out.println("Minimum even number in number stream: "+list.stream().filter(n->n%2==0).min(Integer::compareTo));
         System.out.println("Maximum even number in number stream: "+list.stream().filter(n->n%2==0).max(Integer::compare));
+
+        System.out.println("Average: "+list.stream().mapToDouble(Integer::doubleValue).average());
+        System.out.println("Sum: "+list.stream().reduce(0,(a,b)->a+b));
     }
 }
+
