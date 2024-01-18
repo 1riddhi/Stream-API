@@ -19,5 +19,8 @@ public class App {
         System.out.println(evenNums);
 
         System.out.println("First even number in list: "+list.stream().filter(n->n%2==0).findFirst());
+
+        System.out.println("Minimum even number in number stream: "+list.stream().filter(n->n%2==0).min(Integer::compareTo));
+        System.out.println("Maximum even number in number stream: "+list.stream().filter(n->n%2==0).max(Integer::compare));
     }
 }
