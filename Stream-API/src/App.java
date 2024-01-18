@@ -28,6 +28,10 @@ public class App {
 
         System.out.println("All numbers are even: "+list.stream().allMatch(n->n%2==0));
         System.out.println("Atleast one number is even:"+list.stream().anyMatch(n->n%2==0));
+        
+        System.out.print("Sorted list: ");
+        list.stream().sorted().forEach(n->System.out.print(n+" "));
+        System.out.println();
     }
 }
 
