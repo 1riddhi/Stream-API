@@ -25,6 +25,9 @@ public class App {
 
         System.out.println("Average: "+list.stream().mapToDouble(Integer::doubleValue).average());
         System.out.println("Sum: "+list.stream().reduce(0,(a,b)->a+b));
+
+        System.out.println("All numbers are even: "+list.stream().allMatch(n->n%2==0));
+        System.out.println("Atleast one number is even:"+list.stream().anyMatch(n->n%2==0));
     }
 }
 
