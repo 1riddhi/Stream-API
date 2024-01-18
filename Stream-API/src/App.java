@@ -14,5 +14,8 @@ public class App {
         List<Integer> newList=list.stream().collect(Collectors.toList());
 
         System.out.println(newList);
+
+        List<Integer> evenNums=list.stream().filter(n->n%2==0).collect(Collectors.toList());
+        System.out.println(evenNums);
     }
 }
