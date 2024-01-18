@@ -17,5 +17,7 @@ public class App {
 
         List<Integer> evenNums=list.stream().filter(n->n%2==0).collect(Collectors.toList());
         System.out.println(evenNums);
+
+        System.out.println("First even number in list: "+list.stream().filter(n->n%2==0).findFirst());
     }
 }
