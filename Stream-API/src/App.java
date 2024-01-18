@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.stream.*;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -6,8 +7,12 @@ public class App {
 
         list.stream().forEach(num->System.out.print(num+" "));
         System.out.println();
-        
+
         list.stream().map(num->2*num).forEach(num->System.out.print(num+" "));
         System.out.println();
+
+        List<Integer> newList=list.stream().collect(Collectors.toList());
+
+        System.out.println(newList);
     }
 }
